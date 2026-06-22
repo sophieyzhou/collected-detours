@@ -1,0 +1,82 @@
+/*
+  DESIGN TOKENS — the single source of truth for the site's look.
+
+  Every page is built from these variables, never hard-coded hex values.
+  The base tokens (paper, ink, stamp) are the constant thread that ties
+  every section together. Each section then layers its own --color-section
+  on top via a [data-theme="..."] attribute set on that page's root element
+  (see components/layout/PageShell.tsx) — that's what gives Travel its
+  green, Cooking its amber, etc., without touching a single component.
+
+  To add a new section's color story later: add one new [data-theme="x"]
+  block below. Nothing else in the codebase needs to change.
+*/
+
+:root {
+  /* ---- Base palette: present on every page, every section ---- */
+  --color-paper: #faf3e3;          /* page background — warm ivory, not stark white */
+  --color-paper-raised: #fffdf8;   /* cards / panels sitting above the page */
+  --color-ink: #211f1b;            /* primary text — warm near-black */
+  --color-ink-soft: #6b6354;       /* secondary text, captions, metadata */
+  --color-line: #ddd0ad;           /* hairline rules, borders, dividers */
+
+  /* ---- Stamp ink: the one accent color used the same way everywhere ---- */
+  /* Links, focus rings, the signature "Stamp" badge, primary buttons.   */
+  --color-stamp: #c1432a;
+  --color-stamp-soft: #f3ddd3;
+
+  /* ---- Section accent: overridden per page, this is just the fallback ---- */
+  --color-section: var(--color-stamp);
+  --color-section-soft: var(--color-stamp-soft);
+
+  /* ---- Type ---- */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Pliant', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* ---- Layout ---- */
+  --content-width: 72rem;
+  --radius-card: 18px;
+}
+
+/* Travel — forest green. Maps, trails, altitude. */
+[data-theme='travel'] {
+  --color-section: #2e6f4e;
+  --color-section-soft: #dceedd;
+}
+
+/* Cooking — warm amber. Butter, crust, woodsmoke. */
+[data-theme='cooking'] {
+  --color-section: #c2791f;
+  --color-section-soft: #f6e3c4;
+}
+
+/* Fitness — cobalt. Splits, mile markers, early mornings. */
+[data-theme='fitness'] {
+  --color-section: #2456a6;
+  --color-section-soft: #dce6f5;
+}
+
+/* Books — plum. Margins, underlines, late-night reading lamp. */
+[data-theme='books'] {
+  --color-section: #5b3568;
+  --color-section-soft: #e9deef;
+}
+
+/* Music — teal. Liner notes, late-night playlists. */
+[data-theme='music'] {
+  --color-section: #1f7a66;
+  --color-section-soft: #d7efe8;
+}
+
+/* Style — dusty rose. Wardrobe, rooms, things chosen on purpose. */
+[data-theme='style'] {
+  --color-section: #ad5a72;
+  --color-section-soft: #f4dee4;
+}
+
+/* Writing — quiet taupe. No competing color; let the words carry it. */
+[data-theme='writing'] {
+  --color-section: #4b4639;
+  --color-section-soft: #ede7d6;
+}

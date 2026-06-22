@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Outer dashed postmark ring -->
+  <circle cx="32" cy="32" r="29" fill="#FAF3E3" stroke="#C1432A" stroke-width="2.5" stroke-dasharray="4.5 3" />
+  <!-- Inner ring -->
+  <circle cx="32" cy="32" r="20" fill="none" stroke="#C1432A" stroke-width="1.5" />
+  <!-- CD monogram — C and D reading as "Collected Detours" -->
+  <text x="32" y="37" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="600" fill="#C1432A" letter-spacing="1">CD</text>
+</svg>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Collected Detours — the roads I didn't have to take</title>
+    <meta
+      name="description"
+      content="A personal archive of travel, cooking, fitness, books, music, style, and writing — the roads, projects, places, and passions that were worth going out of the way for."
+    />
+
+    <!-- Open Graph / social share -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Collected Detours" />
+    <meta property="og:description" content="the things worth going out of the way for" />
+    <!-- Update og:url and og:image once you have a domain and a generated social card -->
+    <!-- <meta property="og:url" content="https://collecteddetours.com" /> -->
+    <!-- <meta property="og:image" content="https://collecteddetours.com/og.png" /> -->
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Decodes the redirect set up by public/404.html so deep links work on GitHub Pages -->
+    <script>
+      (function (l) {
+        if (l.search[1] === 'p' && l.search[2] === '=') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(
+            null,
+            '',
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
+
+    <!-- Fraunces (display), Pliant (body), IBM Plex Mono (data / stamps / tags) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Pliant:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
